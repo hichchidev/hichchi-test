@@ -1,5 +1,11 @@
 # hichchi-test
 
+## 0.0.5
+
+### Patch Changes
+
+- 7accfa2: Must work for sure
+
 ## 0.0.4
 
 ### Patch Changes
