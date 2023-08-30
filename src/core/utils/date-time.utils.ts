@@ -1,7 +1,6 @@
 // noinspection JSUnusedGlobalSymbols
 
 import moment from "moment";
-import { Day } from "../enums";
 
 export const now = (format?: string): string => {
     return moment().format(format);
@@ -48,7 +47,7 @@ export const hhmmaToHHmmss = (hh: string, mm: string, a: "am" | "pm" | string): 
 export const time24To12 = (str: string): string => moment(`2000-01-01 ${str}`).format("hh:mm a");
 
 export const nextOccurringDateTime = (
-    dayOfWeek: Day,
+    dayOfWeek: string,
     startTime: string,
     endTime: string,
 ): { isOnline: boolean; nextOccurrence: moment.Moment } => {
