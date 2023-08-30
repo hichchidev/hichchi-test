@@ -7,9 +7,9 @@
   "scripts": {
     "test": "jest",
     "build": "rimraf dist && tsc",
-    "remove-dist": "rimraf dist",
+    "build:dev": "rimraf dist && tsc --outDir ./dist",
     "prepublish": "pnpm run build",
-    "release": "pnpm run build && mv dist/* ./ && pnpm run remove-dist && changeset publish",
+    "release": "pnpm run build && changeset publish",
     "lint": "tsc"
   },
   "repository": {
