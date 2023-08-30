@@ -12,6 +12,7 @@ export const toErrorObject = (str: string): EntityErrorResponse => {
     return toJSON(str) as EntityErrorResponse;
 };
 
+// test case: applyTemplate("Hello #{upperCase}", "world")
 export const applyTemplate = (str: string, prefix: string): string => {
     return str
         .replace("#{upperCase}", prefix.toUpperCase())
