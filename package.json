@@ -8,7 +8,7 @@
     "test": "jest",
     "build": "rimraf dist && tsc",
     "prepublish": "pnpm run build",
-    "release": "pnpm run build && cpx dist/**/* ./ && rimraf dist && changeset publish",
+    "release": "pnpm run build && cpx dist/**/* . && rimraf dist && changeset publish",
     "lint": "tsc"
   },
   "repository": {
