@@ -1,5 +1,11 @@
 # hichchi-test
 
+## 0.0.4
+
+### Patch Changes
+
+- b2bd84a: test 3
+
 ## 0.0.3
 
 ### Patch Changes
