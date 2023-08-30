@@ -2,15 +2,14 @@
   "name": "hichchi-test",
   "version": "0.0.5",
   "description": "hichchi test",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "rimraf dist && tsc",
+    "build": "tsc",
     "build:dev": "rimraf dist && tsc --outDir ./dist",
-    "prepublish": "pnpm run build",
-    "release": "pnpm run build && changeset publish",
-    "lint": "tsc"
+    "prepublish": "npm run build",
+    "release": "npm run build && changeset publish"
   },
   "repository": {
     "type": "git",

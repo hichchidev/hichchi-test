@@ -10,6 +10,4 @@ src/
 .npmignore
 .prettierrc
 *.spec.ts
-package.json
-pnpm-lock.yaml
 tsconfig.json
