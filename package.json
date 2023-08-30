@@ -8,8 +8,7 @@
     "test": "jest",
     "build": "rimraf dist && tsc",
     "prepublish": "pnpm run build",
-    "postpublish": "mv dist/* ./ && rimraf dist",
-    "release": "pnpm run build && changeset publish",
+    "release": "pnpm run build && cpx dist/**/* ./ && rimraf dist && changeset publish",
     "lint": "tsc"
   },
   "repository": {
@@ -48,6 +47,7 @@
     "@types/redis": "^4.0.11",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
+    "cpx": "^1.5.0",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^5.0.0",
