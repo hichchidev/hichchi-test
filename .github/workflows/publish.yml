@@ -21,6 +21,7 @@ jobs:
           node-version: 18.x
 
       - run: npm install
+      - run: npm install -g nx # Install Nx globally if needed
 
       # Run Changesets to manage versioning
       - name: Create Release Pull Request or Publish
