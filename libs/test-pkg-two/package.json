@@ -5,7 +5,10 @@
     "jsonc-eslint-parser": "^2.4.0",
     "tslib": "^2.3.0"
   },
+  "devDependencies": {
+    "typescript": "~5.5.2"
+  },
   "type": "commonjs",
-  "main": "./src/index.js",
+  "main": "/dist/libs/test-pkg-one/index.js",
   "typings": "./src/index.d.ts"
 }

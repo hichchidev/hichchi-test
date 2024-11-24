@@ -7,6 +7,6 @@ export class AppController {
 
     @Get()
     getData(): { message: string } {
-        return { message: this.testService.testView() };
+        return this.testService.testView();
     }
 }
