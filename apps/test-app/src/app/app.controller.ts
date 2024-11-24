@@ -1,12 +1,12 @@
 import { Controller, Get } from "@nestjs/common";
-import { AppService } from "./app.service";
+import { TestService } from "@hichchi-test/test-pkg-one";
 
 @Controller()
 export class AppController {
-    constructor(private readonly appService: AppService) {}
+    constructor(private readonly testService: TestService) {}
 
     @Get()
-    getData() {
-        return this.appService.getData();
+    getData(): { message: string } {
+        return { message: this.testService.testView() };
     }
 }

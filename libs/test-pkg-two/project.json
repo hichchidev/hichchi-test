@@ -1,0 +1,33 @@
+{
+  "name": "test-pkg-two",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/test-pkg-two/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/test-pkg-two",
+        "tsConfig": "libs/test-pkg-two/tsconfig.lib.json",
+        "packageJson": "libs/test-pkg-two/package.json",
+        "main": "libs/test-pkg-two/src/index.ts",
+        "assets": ["libs/test-pkg-two/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}

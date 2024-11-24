@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@hichchi-test/test-pkg-one": ["libs/test-pkg-one/src/index.ts"],
+      "@hichchi-test/test-pkg-two": ["libs/test-pkg-two/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
