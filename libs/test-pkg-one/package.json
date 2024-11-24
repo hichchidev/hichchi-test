@@ -1,8 +1,8 @@
 {
   "name": "@hichchi-test/test-pkg-one",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
-    "@hichchi-test/test-pkg-two": "^0.0.1",
+    "@hichchi-test/test-pkg-two": "^0.0.2",
     "@nestjs/common": "^10.4.8",
     "tslib": "^2.3.0"
   },
