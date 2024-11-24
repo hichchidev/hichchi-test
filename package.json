@@ -7,6 +7,7 @@
     "lint:affected": "nx affected --target=lint",
     "build:affected": "nx affected --target=build"
   },
+  "private": true,
   "dependencies": {
     "@nestjs/common": "^10.0.2",
     "@nestjs/core": "^10.0.2",
