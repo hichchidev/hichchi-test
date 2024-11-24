@@ -7,7 +7,7 @@ import { TestGenService } from "@hichchi-test/test-pkg-two";
 export class TestService {
     constructor(private readonly testGenService: TestGenService) {}
 
-    testView(): string {
-        return this.testGenService.testGen();
+    testView(): { message: string } {
+        return { message: this.testGenService.testGen() };
     }
 }
