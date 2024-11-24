@@ -11,14 +11,6 @@ module.exports = [
     {
         ignores: ["**/node_modules/*", "**/dist/*", "**/rollup.config.js"],
     },
-    {
-        languageOptions: {
-            parserOptions: {
-                project: "./tsconfig.*?.json",
-                tsconfigRootDir: __dirname,
-            },
-        },
-    },
     prettierConfig,
     {
         plugins: {
@@ -56,6 +48,12 @@ module.exports = [
         },
     },
     {
+        languageOptions: {
+            parserOptions: {
+                project: "./tsconfig.*?.json",
+                tsconfigRootDir: __dirname,
+            },
+        },
         files: ["**/*.ts"],
         rules: {
             "@typescript-eslint/explicit-function-return-type": "error",
