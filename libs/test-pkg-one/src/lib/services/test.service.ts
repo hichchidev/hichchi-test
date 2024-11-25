@@ -8,7 +8,6 @@ export class TestService {
     constructor(private readonly testGenService: TestGenService) {}
 
     testView(): { message: string } {
-        // Hello
         return { message: this.testGenService.testGen() };
     }
 }
