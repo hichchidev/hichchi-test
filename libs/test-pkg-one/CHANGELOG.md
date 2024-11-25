@@ -1,5 +1,11 @@
 # @hichchi-test/test-pkg-one
 
+## 0.0.5
+
+### Patch Changes
+
+- [`e84a778`](https://github.com/hichchidev/hichchi-test/commit/e84a778d3e27e6562e4ac022b39919a708b25c99) Thanks [@hichchidev](https://github.com/hichchidev)! - Yellow
+
 ## 0.0.4
 
 ### Patch Changes
