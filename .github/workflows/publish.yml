@@ -16,14 +16,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Ensure full Git history is fetched
+
       - uses: actions/setup-node@v3
         with:
           node-version: 18.x
 
       - run: npm install
-      - run: npm install -g nx # Install Nx globally if needed
+      - run: npm install -g nx  # Install Nx globally if needed
 
-      # Run Changesets to manage versioning
+      # Conditional check to only run changeset version if there are changes
+      - run: |
+          git diff --exit-code || npx changeset version
+
+      # Run Changesets to manage versioning and publishing
       - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1
@@ -31,7 +38,6 @@ jobs:
           # Nx release process
           publish: |
             nx run-many --target=build --all --exclude=test-app && \
-            npx changeset version && \
             npx changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
