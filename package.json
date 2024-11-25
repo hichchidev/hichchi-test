@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "release": "nx run-many --target=build --all && npx changeset version && npx changeset publish",
+    "release": "nx run-many --target=build --all --exclude=test-app && npx changeset version && npx changeset publish",
     "lint:affected": "nx affected --target=lint",
     "build:affected": "nx affected --target=build"
   },
