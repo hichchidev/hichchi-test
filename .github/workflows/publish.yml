@@ -24,7 +24,6 @@ jobs:
           node-version: 18.x
 
       - run: npm install
-      - run: npm install -g nx  # Install Nx globally if needed
 
       # Run Changesets to manage versioning and publishing
       - name: Create Release Pull Request or Publish
@@ -32,9 +31,7 @@ jobs:
         uses: changesets/action@v1
         with:
           # Nx release process
-          publish: |
-            nx run-many --target=build --all --exclude=test-app && \
-            npx changeset publish
+          publish: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
