@@ -30,7 +30,7 @@ jobs:
         with:
           # Nx release process
           publish: |
-            nx affected --target=build --all --exclude=test-app && \
+            nx run-many --target=build --all --exclude=test-app && \
             npx changeset version && \
             npx changeset publish
         env:
