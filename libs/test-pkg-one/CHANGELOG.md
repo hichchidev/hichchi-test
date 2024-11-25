@@ -1,5 +1,12 @@
 # @hichchi-test/test-pkg-one
 
+## 0.0.6
+
+### Patch Changes
+
+- Updated dependencies [[`feb8aaf`](https://github.com/hichchidev/hichchi-test/commit/feb8aaf2ef10c0ce7c01a9e73579fdab76fbff1b)]:
+  - @hichchi-test/test-pkg-two@0.0.4
+
 ## 0.0.5
 
 ### Patch Changes
